@@ -1,0 +1,12 @@
+fastapi>=0.110
+uvicorn[standard]>=0.29
+httpx>=0.27
+sqlalchemy>=2.0
+aiosqlite>=0.20
+apscheduler>=3.10,<4
+psutil>=5.9
+beautifulsoup4>=4.12
+# --- optional real-hardware extras (system boots & runs without them in DEMO_MODE) ---
+# python-miio>=0.6          # Roidmi Eve vacuum
+# spotipy>=2.23             # Spotify (we use raw Web API via httpx; this is convenience)
+# scapy>=2.5                # advanced ARP/ping sweep (fallback: system arp/ip route tools)
