@@ -1,0 +1,27 @@
+INFO:     Started server process [689]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+🏠 Smart Home Agent Harness — http://0.0.0.0:8000 (DEMO_MODE=True, model=bonsai-2:4b)
+[scheduler] AsyncIOScheduler started
+[eventbus] schedule         scheduler: restored 4 persisted jobs
+[eventbus] system           boot: harness ready · 36 tools · demo=True · jobs restored=4
+[eventbus] unknown_device   network: ⚠️ new device joined: 192.168.1.10 [AA:BB:CC:11:22:33] vendor=Apple, Inc.
+[eventbus] tts              tts: 🔊 [lv-LV] "Uzmanību: tīklā parādījās jauna ierīce Apple, Inc.."
+[eventbus] unknown_device   network: ⚠️ new device joined: 192.168.1.12 [AA:BB:CC:44:55:66] vendor=Lenovo
+[eventbus] tts              tts: 🔊 [lv-LV] "Uzmanību: tīklā parādījās jauna ierīce Lenovo."
+[eventbus] unknown_device   network: ⚠️ new device joined: 192.168.1.21 [B8:27:EB:A1:B2:C3] vendor=Raspberry Pi Foundation
+[eventbus] tts              tts: 🔊 [lv-LV] "Uzmanību: tīklā parādījās jauna ierīce Raspberry Pi Foundation."
+[eventbus] unknown_device   network: ⚠️ new device joined: 192.168.1.30 [EC:1A:59:B0:C1:D2] vendor=Philips Lighting
+[eventbus] tts              tts: 🔊 [lv-LV] "Uzmanību: tīklā parādījās jauna ierīce Philips Lighting."
+[eventbus] unknown_device   network: ⚠️ new device joined: 192.168.1.31 [64:16:66:D0:E1:F2] vendor=Shenzhen Roidmi
+[eventbus] tts              tts: 🔊 [lv-LV] "Uzmanību: tīklā parādījās jauna ierīce Shenzhen Roidmi."
+[eventbus] unknown_device   network: ⚠️ new device joined: 192.168.1.35 [F4:1B:67:AA:BB:CC] vendor=Google
+[eventbus] tts              tts: 🔊 [lv-LV] "Uzmanību: tīklā parādījās jauna ierīce Google."
+[eventbus] unknown_device   network: ⚠️ new device joined: 192.168.1.40 [C8:CB:19:11:22:33] vendor=Samsung CNK
+[eventbus] tts              tts: 🔊 [lv-LV] "Uzmanību: tīklā parādījās jauna ierīce Samsung CNK."
+[eventbus] unknown_device   network: ⚠️ new device joined: 192.168.1.147 [3C:07:54:B4:1E:FF] vendor=Apple
+[eventbus] tts              tts: 🔊 [lv-LV] "Uzmanību: tīklā parādījās jauna ierīce Apple."
+[eventbus] network_health   network: latency gw=2.0ms ext=11.2ms devices=8
+INFO:     127.0.0.1:58654 - "GET /api/tools HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36610 - "GET /api/tools HTTP/1.1" 200 OK
