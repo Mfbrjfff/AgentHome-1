@@ -12,7 +12,7 @@ from datetime import datetime, timedelta
 
 import config
 from eventbus import emit, EV_ROUTINE_START, EV_ROUTINE_DONE, EV_HUE_ON, EV_ALERT
-from tools.registry import call_tool
+from tools.registry import tool, call_tool
 from tools import sim
 
 _last_away_run = {"ts": 0.0}
