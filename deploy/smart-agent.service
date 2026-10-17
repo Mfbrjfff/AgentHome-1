@@ -1,0 +1,26 @@
+# Smart Home Autonomous AI Agent Harness — systemd unit (Raspberry Pi 5 / Debian)
+# Install: sudo cp smart-agent.service /etc/systemd/system/ && sudo systemctl enable --now smart-agent
+[Unit]
+Description=Smart Home Autonomous AI Agent Harness (FastAPI + Ollama tools)
+After=network-online.target ollama.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=pi
+Group=pi
+WorkingDirectory=/home/pi/smart-agent
+Environment="PATH=/home/pi/smart-agent/.venv/bin:/usr/local/bin:/usr/bin:/bin"
+# Set DEMO_MODE=false once real hardware credentials are configured in env or .env loader
+Environment="DEMO_MODE=true"
+Environment="OLLAMA_MODEL=bonsai-2:4b"
+ExecStart=/home/pi/smart-agent/.venv/bin/python main.py
+Restart=always
+RestartSec=3
+# memory-conscious hard limits for the 4GB Pi (Ollama runs as its own service)
+MemoryMax=1200M
+TasksMax=128
+NoNewPrivileges=false        # agent needs bluetoothctl/apt via sudo rules; tighten with a dedicated sudoers file
+
+[Install]
+WantedBy=multi-user.target
